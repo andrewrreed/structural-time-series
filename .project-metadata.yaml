@@ -15,8 +15,8 @@ environment_variables:
 tasks:
   - type: create_job
     name: Install dependencies
-    entity_label: install_deps
-    script: install_deps.py
+    entity_label: install_dependencies
+    script: cml/install_dependencies.py
     arguments: None 
     cpu: 1
     memory: 4
@@ -26,7 +26,7 @@ tasks:
     kernel: python3
 
   - type: run_job
-    entity_label: install_deps
+    entity_label: install_dependencies
     short_summary: Running install dependencies job.
     long_summary: >-
       Running the job to install dependencies.  Note that this requires at least 4GB of memory
