@@ -19,7 +19,7 @@ tasks:
     script: install_deps.py
     arguments: None 
     cpu: 1
-    memory: 3
+    memory: 4
     short_summary: Create job to install project dependencies.
     environment:
       TASK_TYPE: CREATE/RUN_JOB
@@ -29,7 +29,7 @@ tasks:
     entity_label: install_deps
     short_summary: Running install dependencies job.
     long_summary: >-
-      Running the job to install dependencies.  Note that this requires at least 2GB of memory
+      Running the job to install dependencies.  Note that this requires at least 4GB of memory
 
   - type: create_job
     name: Train Simple Model
@@ -37,9 +37,9 @@ tasks:
     script: scripts/fit_simple_prophet_model.py
     arguments: None
     short_summary: Job to train and export simple prophet model.
-    long_summary: Job to train and export simple prophet model. Note that this requires at least 2GB of memory. 
+    long_summary: Job to train and export simple prophet model. Note that this requires at least 4GB of memory. 
     cpu: 1
-    memory: 3
+    memory: 4
     environment:
       TASK_TYPE: CREATE/RUN_JOB
     kernel: python3
